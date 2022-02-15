@@ -54,13 +54,15 @@ function dateTimeA() {
 
     function chengeMinute() {
       min = Math.abs(min) % 100; 
-      let min1 = min % 10;
+      let min1 = min % 10;      
       if (min > 10 && min < 20) { 
         minutes = "минут"; 
       } else if (min1 > 1 && min1 < 5) { 
         minutes = "минуты"; 
-      } else if (min1 == 1) { 
+      } else if (min1 == 1 || min == 1) { 
         minutes = "минута"; 
+      } else if (min == 1) {
+        minutes = "минута";         
       } else {
         minutes = "минут"; 
       }
@@ -74,6 +76,8 @@ function dateTimeA() {
       } else if (sec1 > 1 && sec1 < 5) { 
         seconds = "секунды"; 
       } else if (sec1 == 1) { 
+        seconds = "секунда"; 
+      } else if (sec == 1) { 
         seconds = "секунда"; 
       } else {
         seconds = "секунд"; 
