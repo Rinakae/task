@@ -6,7 +6,8 @@ const getData = () => {
     .then(data => {
       console.log(data);
       sendData(data);
-    });
+    })
+    .catch((errorMess) => console.log(errorMess));
 };
 
 const sendData = (data) => {
@@ -19,6 +20,7 @@ const sendData = (data) => {
   })
     .then(response => response.json())
     .then(data => console.log(data));
+    
 };
 
 getData();
